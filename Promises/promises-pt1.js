@@ -1,6 +1,7 @@
 // let Promise = fetch(url)
 // .then() = promise fulfilled
 // .catch() = promise rejected
+
 // function APIFetch() {
 //   fetch(ghibliMovie)
 //     .then((response) => response.json())
@@ -48,4 +49,4 @@ function APIFetch() {
     })
     .catch(() => console.log("unsuccessful!"));
 }
-APIFetch();
+APIFetch()
