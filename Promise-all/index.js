@@ -26,6 +26,10 @@ function callData() {
         user2El.textContent = ` ${results.user2}`
         user3El.textContent = ` ${results.user3}`
     })
+    .catch(() => {
+        console.error('unsuccessful!')
+        displayBtn.textContent = 'Display Users'
+    })
     isShowing = true
 }
 
