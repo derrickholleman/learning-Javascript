@@ -34,7 +34,7 @@ Promise.all([fetchUsers, fetchColors])
     // .then((values) => {
 
     // })
-    // destructure array instead so they can be called separately
+    // destructure array instead so they can be called separately, must be in same order as in Promise.all()
     .then(([users, colors]) => {
         user1El.textContent = `${users[0].name} is ${users[0].age} years old and their favorite color is ${colors[0]}`
         user2El.textContent = `${users[1].name} is ${users[1].age} years old and their favorite color is ${colors[1]}`
