@@ -1,0 +1,5 @@
+Class --> object
+- instance properties: what they have (name, age, height)
+- instance methods: what they do (talk, run, jump)
+
+Polymorphism is the act of redefining a method inside a derived Child class of a Parent
