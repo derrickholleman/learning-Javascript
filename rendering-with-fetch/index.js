@@ -24,14 +24,15 @@ async function renderUsers() {
   // passes in the number from localStorage
   const data = await getUsers(JSON.parse(localStorage.getItem("amount")));
   data.results.map((person) => {
-    textContainer.innerHTML += `
-     <p>${person.name.first} ${person.name.last} lives in ${person.location.city}, ${person.location.state}
+    let {name: {first, last}, location: {city, state}} = person
+      textContainer.innerHTML += `
+     <p>${first} ${last} lives in ${city}, ${state}
      `;
   });
 }
 
 function submitForm() {
-  if (inputEl.value.length === 0) {
+  if (inputEl.value.length === 0 || inputEl.value === 0) {
     return null
   }
     textContainer.innerHTML = "";
