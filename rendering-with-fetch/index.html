@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rendering with Fetch</title>
   </head>
+  <style>
+    #submit, #amount {
+      display: block;
+    }
+    #submit {
+      margin-top: .15rem;
+    }
+  </style>
   <body>
-
+    <form id="amountForm">
+      <label for="amount">Select number of users: </label>
+      <input type="number" id="amount" min="1" />
+      <button onclick="submitForm()" onchange="watchForValue()" id="submit">
+        submit
+      </button>
+    </form>
     <div id="text-container"></div>
     <script src="index.js"></script>
   </body>
