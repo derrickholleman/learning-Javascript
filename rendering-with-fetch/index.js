@@ -38,7 +38,7 @@ async function renderUsers() {
 }
 
 function submitForm() {
-  if (inputEl.value.length === 0 || inputEl.value === 0) {
+  if (inputEl.value.length === 0) {
     return null;
   } else {
     localStorage.setItem("amount", JSON.stringify(inputEl.value));
