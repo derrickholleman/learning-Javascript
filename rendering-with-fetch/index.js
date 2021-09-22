@@ -2,12 +2,14 @@ const textContainer = document.getElementById("text-container");
 const inputEl = document.getElementById("amount");
 
 // prevent default on form submit
-const amountForm = document.getElementById('amountForm')
-amountForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-}, true);
-
-let amount = 0;
+const amountForm = document.getElementById("amountForm");
+amountForm.addEventListener(
+  "submit",
+  function (event) {
+    event.preventDefault();
+  },
+  true
+);
 
 async function getUsers(num) {
   const url = `https://randomuser.me/api/?results=${num}&nat=us`;
@@ -24,8 +26,12 @@ async function renderUsers() {
   // passes in the number from localStorage
   const data = await getUsers(JSON.parse(localStorage.getItem("amount")));
   data.results.map((person) => {
-    let {name: {first, last}, location: {city, state}} = person
-      textContainer.innerHTML += `
+    let {
+      name: { first, last },
+      location: { city, state },
+    } = person;
+
+    textContainer.innerHTML += `
      <p>${first} ${last} lives in ${city}, ${state}
      `;
   });
@@ -33,11 +39,11 @@ async function renderUsers() {
 
 function submitForm() {
   if (inputEl.value.length === 0 || inputEl.value === 0) {
-    return null
-  }
-    textContainer.innerHTML = "";
-    amount = inputEl.value;
-    localStorage.setItem("amount", JSON.stringify(amount));
+    return null;
+  } else {
+    localStorage.setItem("amount", JSON.stringify(inputEl.value));
     renderUsers();
-    inputEl.value = ''
+    inputEl.value = "";
+    textContainer.innerHTML = "";
+  }
 }
