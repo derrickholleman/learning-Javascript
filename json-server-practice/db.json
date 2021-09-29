@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "name": "Rick",
+      "city": "Minneapolis",
+      "age": 25,
+      "id": 1
+    },
+    {
+      "name": "Stefanie",
+      "city": "Minneapolis",
+      "age": 23,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Julie",
+      "city": "Galesville",
+      "age": 60
+    },
+    {
+      "id": 5,
+      "name": "Chris",
+      "city": "Roseville",
+      "age": 27
+    },
+    {
+      "id": 6,
+      "name": "Keegan",
+      "city": "Phoenix",
+      "age": 28
+    },
+    {
+      "id": 7,
+      "name": "Jimmy",
+      "city": "Retroville",
+      "age": 18
+    },
+    {
+      "name": "Paul",
+      "city": "New York City",
+      "age": 60,
+      "id": 8
+    },
+    {
+      "id": 4,
+      "name": "Darryl",
+      "city": "Denver",
+      "age": 66
+    }
+  ]
+}
