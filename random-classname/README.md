@@ -1,0 +1,1 @@
+putting colors in an array and fetching them on page load.  the background color will be randomly chosen with each page load
