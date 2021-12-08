@@ -35,3 +35,12 @@ function joinArrays(arr1, arr2) {
     return combinedArr
 }
 console.log(joinArrays([1, 2, 3], [4, 5, 6]))
+
+// put an array in the middle of another one 
+let arr1 = ["bottom", "topping"]
+let arr2 = ["tomatosauce", "vegetables", "cheese"]
+
+function tuckIn(arr1, arr2) {	
+	return [arr1[0], ...arr2, arr1[arr1.length - 1]]
+}
+console.log(tuckIn(arr1, arr2))
